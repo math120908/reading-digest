@@ -28,6 +28,7 @@ reading-digest/
 ## Current Books
 
 - **AI Engineering** by Chip Huyen (O'Reilly, 2024) - In Progress
+- **AI Agents in Action** by Micheal Lanham (Manning Publications, 2025) - Ready to Start
 
 ## Why This Approach?
 
