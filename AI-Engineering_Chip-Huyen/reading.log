@@ -1,0 +1,33 @@
+# Reading Log: AI Engineering by Chip Huyen
+
+Started: Saturday, October 11, 2025
+
+---
+
+Saturday, October 11, 2025
+Q: What are the most important differences between AI Engineering and ML Engineering from Chapter 1?
+A: Three key differences:
+1. **Model adaptation** - AI Engineering focuses on adapting pre-trained foundation models rather than training from scratch
+2. **Efficient train/inference optimization** - Different optimization priorities and techniques
+3. **Evaluation is harder** - Evaluating foundation models and AI applications poses greater challenges than traditional ML metrics
+
+Q: Why is evaluation harder in AI Engineering compared to ML Engineering?
+A: Initially thought it was about open-ended outputs vs objective metrics, but realized this existed before (unsupervised/RL). The real difference comes from **foundation models' scope and generality**:
+
+**Key Insight**: Evaluation complexity scales with how general-purpose your deployment is:
+- **Foundation Model** (hardest) → general-purpose, multi-modal, unlimited tasks
+- **LLM in specific application** (moderate) → constrained domain, clearer metrics
+- **Traditional ML** (simplest) → single task, clear metrics
+
+**What makes Foundation Model evaluation uniquely hard:**
+1. **Scale and Generality** - Must evaluate across dozens of different tasks (translation, coding, summarization, etc.) with one framework
+2. **Emergence** - Models exhibit capabilities not explicitly trained for; need to evaluate unexpected abilities
+3. **Production Stakes** - Higher requirements for critical applications (medical, legal, customer service)
+4. **Adaptation Evaluation** - Must evaluate not just the model, but also prompt engineering, RAG, fine-tuning impacts
+
+**Practical takeaway**: Most AI Engineers constrain use cases to make evaluation tractable, rather than evaluating all possible foundation model capabilities.
+
+---
+
+
+
