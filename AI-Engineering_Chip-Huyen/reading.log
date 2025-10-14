@@ -27,6 +27,54 @@ A: Initially thought it was about open-ended outputs vs objective metrics, but r
 
 **Practical takeaway**: Most AI Engineers constrain use cases to make evaluation tractable, rather than evaluating all possible foundation model capabilities.
 
+Q: Generative algorithms with next-token prediction existed for 15+ years (Markov chains, n-grams). Isn't the evaluation methodology similar to what we're trying to do for foundation models?
+A: Great insight - the **technical methodology** (next token prediction) is similar, but **what we need to evaluate** changed dramatically:
+
+**Why Old Generative Models Were Easier to Evaluate:**
+1. **Limited Quality = Limited Expectations**
+   - Markov chain outputs were obviously "machine-like" and low quality
+   - Used for narrow tasks: autocomplete, spam filtering
+   - Evaluation focused on: "Is it better than random?" or "Does it reduce typing time?"
+   - Nobody expected coherent paragraphs, so coherence wasn't evaluated
+
+2. **Evaluation Metrics Aligned with Use Cases**
+   - Perplexity: "Does this predict next word better?"
+   - BLEU score for translation: Compare to reference translations
+   - Metrics were "good enough" for limited capabilities
+
+3. **Narrow Scope**
+   - Each model: ONE task
+   - Speech → Word Error Rate
+   - Translation → BLEU
+   - No need to evaluate "general intelligence"
+
+**What Changed with Foundation Models:**
+1. **Quality Crossed a Threshold** - Output human-like enough that we now care about: factual accuracy, reasoning, safety, bias, contextual appropriateness
+2. **Perplexity Became Insufficient** - Lower perplexity ≠ better answers; model can have great perplexity but hallucinate or be unsafe
+3. **Multi-Task Reality** - Hundreds of tasks requiring evaluation frameworks that work across all use cases
+
+**Key Insight**: It's not that evaluation was always this hard - the **capabilities and deployment patterns fundamentally changed what "good evaluation" means**. The technical methodology is similar, but quality, scope, and stakes are completely different.
+
+Q: In application development evaluation, there are benchmarks that say "5-shot" - what does that mean?
+A: "5-shot" refers to **few-shot learning/prompting** - giving the model 5 examples in the prompt before asking it to perform the task.
+
+---
+
+## Chapter 1 Summary
+
+**Overall takeaway**: Overview of AI/LLM/foundation models and terminology. Key learnings:
+
+1. **ML vs AI Engineering difference is now clear** - Different approaches, evaluation challenges, optimization focuses
+
+2. **Cross-domain accessibility** - Engineering specialties (FE, ML, etc.) still necessary, but everyone can more easily access other domains now
+
+3. **Dev cycle changed**: Traditional (Data → Model → PROD) vs AI Engineering (PROD → Data → Model)
+
+4. **AI Stack - 3 layers**:
+   - Application layer
+   - Model layer  
+   - Infrastructure layer
+
 ---
 
 
