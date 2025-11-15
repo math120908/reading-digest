@@ -78,4 +78,40 @@ A: "5-shot" refers to **few-shot learning/prompting** - giving the model 5 examp
 ---
 
 
+Monday, October 27, 2025 03:00 PM
+Q: What is RNN?
+A: A Recurrent Neural Network is a neural architecture for sequences that maintains a hidden state over time. At each step t it updates a state from the current input and the previous state, enabling it to model temporal dependencies. Variants like LSTM and GRU add gates to better capture long-range context and mitigate vanishing gradients. Today, transformers dominate many NLP tasks, but RNNs can still be useful for lightweight, streaming, or low-latency scenarios.
+
+Q: Relationship between transformer architecture and BERT
+A: BERT uses only the **encoder** portion of the Transformer architecture. While the original Transformer (2017) had both encoder and decoder stacks for seq2seq tasks, BERT (2018) takes just the encoder and trains it with Masked Language Modeling (MLM) and Next Sentence Prediction. This makes BERT **bidirectional**—it sees full left+right context, unlike decoder-only models (GPT) that are causal/left-to-right. BERT inherits the same self-attention, feedforward layers, and positional encodings from Transformer, but optimizes for understanding tasks (classification, NER, Q&A) rather than generation.
+---
+
+## Chapter 2.1 Summary - Key Notes
+
+Monday, October 27, 2025 03:30 PM
+
+**Foundation Model Characteristics - Three Key Metrics:**
+
+1. **Number of tokens in dataset ≠ number of training tokens** - These are different concepts
+2. **More tokens ≠ more computation power needed** - Token count doesn't directly translate to compute requirements
+3. **Training data goals**: Quantity, quality, and diversity
+4. **Number of parameters** - Proxy for model's learning capacity
+5. **Number of training tokens** - Proxy for how much a model learned
+6. **Number of FLOPs** - Proxy for training cost
+
+**Hyperparameters that Control Learning:**
+- Batch size
+- Number of epochs
+- Learning rate
+- Per-layer initial variance
+- And more...
+
+### Section 2.1 - Modeling (Completed)
+Monday, October 27, 2025 03:56 PM
+
+**Summary**: Current modeling algorithms center on transformers. The section covers modeling size problems and ongoing research challenges around that.
+
+---
+
+
 
